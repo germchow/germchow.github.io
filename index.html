@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        body {
+            background-color: #2d2d2d; /* Dark gray background */
+            color: #e0e0e0; /* Light gray text */
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        header, h2 {
+            
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        h2 {
+            font-size: 36px;
+        }
+
+        header {
+            font-size: 56px;
+            font-weight: 700;
+            transition: color 2s; /* Smooth transition effect over 2 seconds */
+        }
+
+        section {
+            margin: auto;
+            width: 50%;
+            margin-bottom: 30px;
+            transition: transform 0.3s; /* Smooth scaling effect */
+        }
+
+        section:hover {
+            transform: scale(1.1); /* Scale up by 10% on hover */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .project:hover {
+            transform: scale(1.2 );
+            
+        }
+
+        .project {
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+
+        .project img {
+            border: 3px solid; /* Initially set to a color that will be overridden by JavaScript */
+            border-radius: 8px;
+            transition: border-color 2s; /* Smooth transition for border color */
+        }
+
+
+        footer {
+            font-size: 14px;
+            margin-top: 80px; /* Larger margin-top value to move the footer lower */
+            color: #4caf50; /* Green color */
+        }
+
+        /* Style for the Spotify widget */
+        .spotify-widget {
+            position: fixed;
+            bottom: 5%;
+            width: 100%;
+        }
+
+        iframe {
+            border: 4px solid; /* Initially set to a color that will be overridden by JavaScript */
+            transition: border-color 2s; /* Smooth transition for border color */
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var header = document.querySelector('header');
+            var iframe = document.querySelector('iframe')
+            var colors = ['#ff6781', '#65a8d4', '#8ac754']; // Desaturated colors
+            var currentColorIndex = 0;
+
+            function updateColors() {
+                var currentColor = colors[currentColorIndex];
+
+                header.style.color = currentColor;
+                iframe.style.borderColor = currentColor
+
+                currentColorIndex = (currentColorIndex + 1) % colors.length;
+
+                setTimeout(updateColors, 1000); // Change colors every 2000 milliseconds (2 seconds)
+            }
+
+            updateColors(); // Start the color update loop
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        my (jeremy's) domain
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>Computer science student at UBC, software developer for UBC Thunderbots.</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <img src="project1.jpg" alt="Project 1">
+            <p>Description of Project 1.</p>
+        </div>
+
+        <div class="project">
+            <h3>Project 2</h3>
+            <img src="project2.jpg" alt="Project 2">
+            <p>Description of Project 2.</p>
+        </div>
+        
+        <!-- Add more projects as needed -->
+    </section>
+
+
+    <!-- <footer>
+        &copy; 2023 Your Name | Designed with ❤️ in the 90s
+    </footer> -->
+
+    <div class="spotify-widget">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/17YqKUE5bDWDCR0HE6VPI8?utm_source=generator&theme=0" width="80%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
+    
+
+</body>
+</html>
