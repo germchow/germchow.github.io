@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Your Name - Portfolio</title>
     <style>
         body {
@@ -10,14 +11,13 @@
             color: #e0e0e0; /* Light gray text */
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            margin-top: 5%;
+            margin-bottom: 20%;
             margin-left: 0px;
             margin-right: 0px;
         }
 
         header, h2 {
-            
             margin-bottom: 20px;
             display: inline-block;
         }
@@ -36,11 +36,6 @@
             margin: auto;
             width: 50%;
             margin-bottom: 30px;
-            transition: transform 0.3s; /* Smooth scaling effect */
-        }
-
-        section:hover {
-            transform: scale(1.1); /* Scale up by 10% on hover */
         }
 
         img {
@@ -49,7 +44,7 @@
         }
 
         .project:hover {
-            transform: scale(1.2 );
+            transform: scale(1.1);
             
         }
 
@@ -65,6 +60,18 @@
             transition: border-color 2s; /* Smooth transition for border color */
         }
 
+        a:visited {
+        color: #e0e0e0;
+        background-color: transparent;
+        text-decoration: none;
+        }
+
+        a:hover {
+        color: #e5e5e5a4;
+        background-color: transparent;
+        text-decoration: underline;
+        }
+
 
         footer {
             font-size: 14px;
@@ -75,7 +82,7 @@
         /* Style for the Spotify widget */
         .spotify-widget {
             position: fixed;
-            bottom: 5%;
+            bottom: 0%;
             width: 100%;
         }
 
@@ -96,7 +103,7 @@
                 var currentColor = colors[currentColorIndex];
 
                 header.style.color = currentColor;
-                iframe.style.borderColor = currentColor
+                iframe.style.borderColor = currentColor;
 
                 currentColorIndex = (currentColorIndex + 1) % colors.length;
 
@@ -110,29 +117,54 @@
 <body>
 
     <header>
-        my (jeremy's) domain
+        Welcome to my domain
     </header>
+
+    <div style="margin-bottom: 50px;">
+        <a href="https://www.linkedin.com/in/jeremyqiao/" target=”_blank”><i class="fa fa-linkedin-square" style="font-size:48px;"></i></a>
+        <a href="https://github.com/germchow" target=”_blank”><i class="fa fa-github" style="font-size:48px;"></i></a>
+    </div>
 
     <section>
         <h2>About Me</h2>
-        <p>Computer science student at UBC, software developer for UBC Thunderbots.</p>
+        <p>Computer science student at UBC, software developer at Sierra Wireless, open source developer for UBC Thunderbots.</p>
     </section>
 
     <section>
         <h2>Projects</h2>
 
         <div class="project">
-            <h3>Project 2</h3>
-            <img src="project1.jpg" alt="Project 1">
-            <p>Description of Project 1.</p>
+            <h3>Pirate King</h3>
+            <a href="https://germchow.github.io/pirate-king/" target=”_blank”>
+                <img src="pirateking.gif" alt="Project 1">
+            </a>
+            <p>2D fighting game inspired by Eichiro Oda's hit series <i>One Piece</i></p>
         </div>
 
         <div class="project">
-            <h3>Project 2</h3>
-            <img src="project2.jpg" alt="Project 2">
-            <p>Description of Project 2.</p>
+            <h3>Ray Tracing Renderer</h3>
+            <a href="https://germchow.github.io/cpsc314-a6/" target=”_blank”>
+                <img src="raytracer.gif" alt="Project 2">
+            </a>
+            <p>Interactive ray tracing simulation written using Three.js and WebGL</p>    
         </div>
-        
+
+        <div class="project">
+            <h3>C-like Language Compiler</h3>
+            <a href="https://github.com/germchow/cpsc411-compiler-project" target=”_blank”>
+                <img src="compiler.gif" alt="Project 3">
+            </a>
+            <p>Compiler written in Racket that compiles a custom C-like language into x86 assembly</p>    
+        </div>
+
+        <div class="project">
+            <h3>To see more projects:</h3>
+            <a href="https://github.com/germchow?tab=repositories" target=”_blank”>
+                <img src="profile.png" alt="Project 4" style="width: 30%;">
+            </a>
+            <p>(Not all are web-friendly) </p>
+        </div>
+
         <!-- Add more projects as needed -->
     </section>
 
