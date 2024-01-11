@@ -13,7 +13,7 @@
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
             margin-top: 5%;
-            margin-bottom: 200px;
+            margin-bottom: 220px;
             margin-left: 0px;
             margin-right: 0px;
         }
@@ -50,7 +50,7 @@
         }
 
         .project {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             transition: transform 0.3s;
         }
         
@@ -59,7 +59,16 @@
             border: 3px solid; /* Initially set to a color that will be overridden by JavaScript */
             border-radius: 8px;
             border-width: 4px;
-            transition: border-color 2s; /* Smooth transition for border color */
+        }
+
+        .moreprojects:hover {
+            transform: scale(1.1);
+            
+        }
+
+        .moreprojects {
+            margin-bottom: 30px;
+            transition: transform 0.3s;
         }
 
         a:link, a:visited {
@@ -159,10 +168,10 @@
             <p>Compiler written in Racket that compiles a custom C-like language into x86 assembly</p>    
         </div>
 
-        <div class="project">
+        <div class="moreprojects">
             <h3>To see more projects:</h3>
             <a href="https://github.com/germchow?tab=repositories" target="_blank" rel="noopener noreferrer">
-                <img src="profile.png" alt="Project 4" style="width: 30%;">
+                <img src='octocat.png' onmouseover="this.src='octocat_clicked.png';" onmouseout="this.src='octocat.png';" />
             </a>
             <p>(Not all are web-friendly) </p>
         </div>
